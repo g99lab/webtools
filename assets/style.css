@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 48px;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 10;
+}
+
+.content {
+  padding: 70px 16px 80px;
+}
+
+.ad-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background: #f8f8f8;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  padding: 5px;
+}
