@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Base64 Tool</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="../index.html" style="color:white;text-decoration:none;">← Back</a>
+</header>
+
+<main class="content">
+  <h2>Base64 Encoder / Decoder</h2>
+
+  <textarea id="input" placeholder="Enter text"></textarea>
+
+  <button onclick="encode()">Encode</button>
+  <button onclick="decode()">Decode</button>
+
+  <textarea id="output" placeholder="Output"></textarea>
+</main>
+
+<footer class="ad-footer">
+  <p>Ad Area</p>
+</footer>
+
+<script>
+function encode() {
+  const t = document.getElementById('input').value;
+  document.getElementById('output').value = btoa(t);
+}
+function decode() {
+  const t = document.getElementById('input').value;
+  try {
+    document.getElementById('output').value = atob(t);
+  } catch {
+    document.getElementById('output').value = "Invalid Base64";
+  }
+}
+</script>
+
+</body>
+</html>
